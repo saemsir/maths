@@ -34,261 +34,451 @@
     <style>
         body { background-color: #ffffff; color: #1e293b; }
         .math-font { font-family: 'Lora', serif; }
-        
-        /* Minimalist shadow for cards */
         .clean-card {
             background: #fff;
             border: 1px solid #e2e8f0;
             transition: all 0.3s ease;
         }
         .clean-card:hover {
-            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.08);
+            box-shadow: 0 15px 40px -10px rgba(0,0,0,0.06);
             border-color: #cbd5e1;
         }
-
-        /* Subtle grid background for the Hero */
         .bg-grid-pattern {
-            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
-            background-size: 24px 24px;
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 28px 28px;
         }
     </style>
 </head>
 <body class="antialiased selection:bg-accent selection:text-white">
 
+    <!-- Top Announcement Bar -->
+    <div class="bg-slate-900 text-white text-xs py-2 px-4 text-center font-medium flex justify-center items-center gap-2">
+        <span class="bg-accent text-white px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider">New Batch</span>
+        <span>Target JEE/NEET 2025 Comprehensive Modules Live. Admissions Closing Soon!</span>
+        <a href="#batches" class="underline ml-2 hover:text-accent transition">Explore →</a>
+    </div>
+
     <!-- Navigation -->
-    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-40 border-b border-slate-200 px-6 lg:px-20 py-4 flex justify-between items-center">
-        <a href="#" class="text-xl font-bold font-serif flex items-center gap-2 text-slate-800">
-            <div class="w-8 h-8 bg-slate-900 text-white rounded flex items-center justify-center font-sans text-sm font-bold">SP</div>
-            Saem Physics
+    <nav class="bg-white/95 backdrop-blur-md sticky top-0 z-40 border-b border-slate-200 px-6 lg:px-20 py-4 flex justify-between items-center shadow-xs">
+        <a href="#" class="text-xl font-bold font-serif flex items-center gap-2 text-slate-900">
+            <div class="w-9 h-9 bg-slate-900 text-white rounded-lg flex items-center justify-center font-sans text-sm font-bold shadow-md">SP</div>
+            Saem Physics <span class="text-xs font-sans font-normal text-slate-500 hidden sm:inline">| MIT Methods</span>
         </a>
         <div class="hidden md:flex gap-8 text-sm font-medium text-slate-600">
             <a href="#about" class="hover:text-accent transition">About</a>
-            <a href="#batches" class="hover:text-accent transition">Batches</a>
+            <a href="#syllabus" class="hover:text-accent transition">Syllabus</a>
             <a href="#lectures" class="hover:text-accent transition">Lectures</a>
+            <a href="#batches" class="hover:text-accent transition">Batches</a>
+            <a href="#study-material" class="hover:text-accent transition">Study Material</a>
             <a href="#testimonials" class="hover:text-accent transition">Toppers</a>
         </div>
-        <a href="#enquiry" class="bg-slate-900 text-white px-5 py-2 rounded text-sm font-semibold hover:bg-slate-800 transition">
-            Contact Us
+        <a href="#enquiry" class="bg-slate-900 text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-slate-800 transition shadow-sm">
+            Enquire Now
         </a>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative py-20 px-6 lg:px-20 bg-grid-pattern bg-slate-50 border-b border-slate-200 overflow-hidden">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section class="relative py-24 px-6 lg:px-20 bg-grid-pattern bg-slate-50/50 border-b border-slate-200 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
             <!-- Left Text Content -->
-            <div>
-                <div class="inline-block border border-blue-200 bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide mb-6">
-                    NEET | JEE Advanced | CBSE
+            <div class="lg:col-span-7">
+                <div class="inline-flex items-center gap-2 border border-blue-200 bg-blue-50 text-blue-700 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6 shadow-2xs">
+                    <i class="fas fa-graduation-cap"></i> Designed for NEET, JEE Advanced & CBSE
                 </div>
-                <h1 class="text-4xl md:text-5xl font-bold mb-6 font-serif leading-tight text-slate-900">
-                    Master Mathematics & Physics with True Intuition.
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 font-serif leading-[1.15] text-slate-900">
+                    Master Mathematics & Physics with <span class="text-accent underline decoration-blue-200 decoration-wavy">True Intuition</span>.
                 </h1>
-                <p class="text-lg text-slate-600 mb-8 max-w-xl">
-                    Move beyond rote memorization. We bring MIT-level clarity to competitive exam preparation, helping you visualize concepts just like top global rankers.
+                <p class="text-lg text-slate-600 mb-8 max-w-2xl leading-relaxed">
+                    Move beyond rote memorization. Inspired by world-renowned teaching frameworks, we bring MIT-level clarity to competitive exam preparation, helping you visualize concepts like top global rankers.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <!-- Prominent Demo Button to Google Form -->
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeXiIEqRcGyYHgB42B7ju9SfwtoGofO1gxcr0qcWfXOnxO8Xg/viewform" target="_blank" class="bg-accent text-white px-8 py-3.5 rounded shadow-lg shadow-blue-500/30 font-bold text-center flex items-center justify-center gap-2 hover:bg-blue-700 transition transform hover:-translate-y-0.5">
+                <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeXiIEqRcGyYHgB42B7ju9SfwtoGofO1gxcr0qcWfXOnxO8Xg/viewform" target="_blank" class="bg-accent text-white px-8 py-4 rounded-xl shadow-lg shadow-blue-500/25 font-bold text-center flex items-center justify-center gap-2 hover:bg-blue-700 transition transform hover:-translate-y-0.5">
                         <i class="fas fa-video"></i> Book a Free Demo Class
                     </a>
-                    <a href="#batches" class="border border-slate-300 bg-white text-slate-800 px-8 py-3.5 rounded font-bold text-center hover:bg-slate-50 transition">
-                        View Batches
+                    <a href="#batches" class="border border-slate-300 bg-white text-slate-800 px-8 py-4 rounded-xl font-bold text-center hover:bg-slate-50 transition shadow-2xs">
+                        View Flagship Batches
                     </a>
+                </div>
+
+                <!-- Stats Bar inside Hero -->
+                <div class="grid grid-cols-3 gap-6 pt-6 border-t border-slate-200">
+                    <div>
+                        <div class="text-2xl font-bold font-serif text-slate-900">100k+</div>
+                        <div class="text-xs text-slate-500 font-medium">Active Aspirants</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold font-serif text-slate-900">500+</div>
+                        <div class="text-xs text-slate-500 font-medium">Top 100 Ranks</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold font-serif text-slate-900">100%</div>
+                        <div class="text-xs text-slate-500 font-medium">Visual Clarity</div>
+                    </div>
                 </div>
             </div>
 
             <!-- Right Image Content -->
-            <div class="relative mx-auto w-full max-w-md">
-                <div class="absolute inset-0 bg-slate-200 translate-x-4 translate-y-4 rounded-xl"></div>
-                <!-- Real image of Prof Gilbert Strang -->
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Gilbert_Strang_at_MIT_%28cropped%29.jpg" alt="Prof. Gilbert Strang" class="relative z-10 w-full h-auto rounded-xl shadow-xl object-cover grayscale hover:grayscale-0 transition duration-700">
-                <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-xl border border-slate-100 z-20">
-                    <p class="font-serif italic text-sm text-slate-700">"Mathematics is a beautiful subject... I hope you see it."</p>
-                    <p class="text-xs text-slate-400 mt-1 font-bold">— Prof. Gilbert Strang</p>
+            <div class="lg:col-span-5 relative mx-auto w-full max-w-md">
+                <div class="absolute inset-0 bg-slate-200 translate-x-4 translate-y-4 rounded-2xl"></div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Gilbert_Strang_at_MIT_%28cropped%29.jpg" alt="Prof. Gilbert Strang" class="relative z-10 w-full h-auto rounded-2xl shadow-xl object-cover grayscale hover:grayscale-0 transition duration-700 border border-slate-300">
+                <div class="absolute -bottom-6 -left-6 bg-white p-5 rounded-xl shadow-xl border border-slate-100 z-20 max-w-xs">
+                    <p class="font-serif italic text-sm text-slate-700 leading-snug">"Mathematics is a beautiful subject... I hope you see it."</p>
+                    <p class="text-xs text-slate-400 mt-2 font-bold">— Prof. Gilbert Strang, MIT</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 px-6 lg:px-20 bg-white">
-        <div class="max-w-7xl mx-auto text-center mb-12">
-            <h2 class="text-3xl font-bold font-serif text-slate-900 mb-4">Our Hall of Fame</h2>
-            <p class="text-slate-500">Consistent top ranks across India's toughest examinations.</p>
+    <!-- Features Strip (PW / Allen Hybrid) -->
+    <section class="py-12 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 lg:px-20 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="p-6 clean-card rounded-xl">
+                <div class="w-12 h-12 mx-auto bg-blue-50 text-accent rounded-xl flex items-center justify-center text-xl mb-3"><i class="fas fa-book"></i></div>
+                <h4 class="font-bold text-slate-900 mb-1">Daily DPPs</h4>
+                <p class="text-xs text-slate-500">Problem sheets with detailed video solutions</p>
+            </div>
+            <div class="p-6 clean-card rounded-xl">
+                <div class="w-12 h-12 mx-auto bg-blue-50 text-accent rounded-xl flex items-center justify-center text-xl mb-3"><i class="fas fa-chart-line"></i></div>
+                <h4 class="font-bold text-slate-900 mb-1">AITS Series</h4>
+                <p class="text-xs text-slate-500">All India Test Series with national benchmarking</p>
+            </div>
+            <div class="p-6 clean-card rounded-xl">
+                <div class="w-12 h-12 mx-auto bg-blue-50 text-accent rounded-xl flex items-center justify-center text-xl mb-3"><i class="fas fa-headset"></i></div>
+                <h4 class="font-bold text-slate-900 mb-1">24/7 Doubt Engine</h4>
+                <p class="text-xs text-slate-500">Instant doubt resolution by expert faculty</p>
+            </div>
+            <div class="p-6 clean-card rounded-xl">
+                <div class="w-12 h-12 mx-auto bg-blue-50 text-accent rounded-xl flex items-center justify-center text-xl mb-3"><i class="fas fa-medal"></i></div>
+                <h4 class="font-bold text-slate-900 mb-1">Rank Mentorship</h4>
+                <p class="text-xs text-slate-500">Personalized guidance by top IITians/Doctors</p>
+            </div>
         </div>
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Topper 1 -->
-            <div class="clean-card p-8 rounded-xl text-center">
-                <div class="text-accent text-3xl mb-4 font-bold font-serif">AIR 12</div>
-                <h3 class="text-xl font-bold text-slate-800">Aarav Sharma</h3>
-                <p class="text-sm font-semibold text-slate-500 mb-4">JEE Advanced 2024</p>
-                <p class="text-slate-600 italic text-sm">"The visual approach to matrices and calculus fundamentally changed how I solved physics mechanics problems."</p>
+    </section>
+
+    <!-- About Instructor & Teaching Philosophy -->
+    <section id="about" class="py-24 px-6 lg:px-20 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-xs font-bold text-accent uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">World Class Mentorship</span>
+                <h2 class="text-3xl md:text-4xl font-bold font-serif text-slate-900 mt-4 mb-6">Built on Principles of Clarity & Depth</h2>
+                <p class="text-slate-600 mb-6 leading-relaxed">
+                    At Saem Physics, we combine rigorous competitive coaching methodologies seen in Kota with global analytical perspectives. Our core philosophy relies on building structural intuition rather than memorizing formulas.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4 p-4 clean-card rounded-xl bg-white">
+                        <div class="bg-accent/10 text-accent p-2.5 rounded-lg"><i class="fas fa-check text-lg"></i></div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 mb-1">Visualizing Complex Mechanics</h4>
+                            <p class="text-sm text-slate-500">Translating abstract calculus and differential equations into clear physical interpretations.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 clean-card rounded-xl bg-white">
+                        <div class="bg-accent/10 text-accent p-2.5 rounded-lg"><i class="fas fa-check text-lg"></i></div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 mb-1">Rigorous Problem Practice</h4>
+                            <p class="text-sm text-slate-500">Carefully curated problem sets ranging from NCERT fundamentals to JEE Advanced level hurdles.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- Topper 2 -->
-            <div class="clean-card p-8 rounded-xl text-center">
-                <div class="text-accent text-3xl mb-4 font-bold font-serif">695 / 720</div>
-                <h3 class="text-xl font-bold text-slate-800">Neha Gupta</h3>
-                <p class="text-sm font-semibold text-slate-500 mb-4">NEET UG 2024</p>
-                <p class="text-slate-600 italic text-sm">"Clear, noise-free lectures focused entirely on concepts. The best decision I made for my Physics prep."</p>
+            <div class="clean-card p-8 rounded-2xl bg-white shadow-sm">
+                <h3 class="text-2xl font-bold font-serif text-slate-900 mb-4">Why Aspirants Choose Us</h3>
+                <ul class="space-y-4 text-slate-700 text-sm">
+                    <li class="flex items-center justify-between pb-3 border-b border-slate-100">
+                        <span class="font-medium">Faculty Teaching Experience</span>
+                        <span class="font-bold text-accent">15+ Years</span>
+                    </li>
+                    <li class="flex items-center justify-between pb-3 border-b border-slate-100">
+                        <span class="font-medium">Syllabus Completion Timeline</span>
+                        <span class="font-bold text-accent">3 Months Prior to Exams</span>
+                    </li>
+                    <li class="flex items-center justify-between pb-3 border-b border-slate-100">
+                        <span class="font-medium">Test Series Analytics</span>
+                        <span class="font-bold text-accent">AI-Powered Detailed Reports</span>
+                    </li>
+                    <li class="flex items-center justify-between pb-3 border-b border-slate-100">
+                        <span class="font-medium">Study Module Format</span>
+                        <span class="font-bold text-accent">Hardcopy + Digital PDF</span>
+                    </li>
+                </ul>
             </div>
-            <!-- Topper 3 -->
-            <div class="clean-card p-8 rounded-xl text-center">
-                <div class="text-accent text-3xl mb-4 font-bold font-serif">99.6%</div>
-                <h3 class="text-xl font-bold text-slate-800">Rohan Verma</h3>
-                <p class="text-sm font-semibold text-slate-500 mb-4">CBSE Class 12 Boards</p>
-                <p class="text-slate-600 italic text-sm">"Perfect alignment with NCERT, yet teaches you the 'why' behind every formula. Scored 100 in Math."</p>
+        </div>
+    </section>
+
+    <!-- Comprehensive Syllabus Section (Interactive Accordion) -->
+    <section id="syllabus" class="py-24 px-6 lg:px-20 bg-white border-b border-slate-200">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+            <span class="text-xs font-bold text-accent uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">Curriculum Breakdown</span>
+            <h2 class="text-3xl md:text-4xl font-bold font-serif text-slate-900 mt-4 mb-3">Structured Roadmap for Success</h2>
+            <p class="text-slate-500">Explore how we systematically cover every single chapter required for top ranks.</p>
+        </div>
+        
+        <div class="max-w-4xl mx-auto space-y-4">
+            <!-- Accordion Item 1 -->
+            <div class="clean-card rounded-xl p-6">
+                <h3 class="text-lg font-bold text-slate-900 flex justify-between items-center cursor-pointer">
+                    <span>Phase 1: Fundamental Mathematical Tools & Kinematics (Class 11)</span>
+                    <i class="fas fa-chevron-down text-slate-400 text-sm"></i>
+                </h3>
+                <p class="text-slate-600 text-sm mt-3 pt-3 border-t border-slate-100">
+                    Covers calculus basics (differentiation & integration as applied to physics), vectors, motion in 1D & 2D, laws of motion, and work-energy-power with graphical analysis.
+                </p>
+            </div>
+            <!-- Accordion Item 2 -->
+            <div class="clean-card rounded-xl p-6">
+                <h3 class="text-lg font-bold text-slate-900 flex justify-between items-center cursor-pointer">
+                    <span>Phase 2: Advanced Electrodynamics & Matrices (Class 12)</span>
+                    <i class="fas fa-chevron-down text-slate-400 text-sm"></i>
+                </h3>
+                <p class="text-slate-600 text-sm mt-3 pt-3 border-t border-slate-100">
+                    Deep dive into electrostatics, current electricity, magnetic effects, electromagnetic induction, alongside linear algebra systems and matrix calculus.
+                </p>
+            </div>
+            <!-- Accordion Item 3 -->
+            <div class="clean-card rounded-xl p-6">
+                <h3 class="text-lg font-bold text-slate-900 flex justify-between items-center cursor-pointer">
+                    <span>Phase 3: Revision, Mock Tests & Rank Booster Sessions</span>
+                    <i class="fas fa-chevron-down text-slate-400 text-sm"></i>
+                </h3>
+                <p class="text-slate-600 text-sm mt-3 pt-3 border-t border-slate-100">
+                    Full-length simulated test papers, previous years' question (PYQ) dissection, and short-trick formulation workshops.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- YouTube Lectures Section (Linear Algebra MIT 18.06) -->
-    <section id="lectures" class="py-20 px-6 lg:px-20 bg-slate-50 border-y border-slate-200">
+    <section id="lectures" class="py-24 px-6 lg:px-20 bg-slate-50 border-b border-slate-200">
         <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
                 <div>
-                    <h2 class="text-3xl font-bold font-serif text-slate-900 mb-2">Linear Algebra Masterclass</h2>
+                    <span class="text-xs font-bold text-accent uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">Open Courseware</span>
+                    <h2 class="text-3xl md:text-4xl font-bold font-serif text-slate-900 mt-4 mb-2">Linear Algebra Masterclass</h2>
                     <p class="text-slate-500">Essential foundations directly embedded from MIT OpenCourseWare.</p>
                 </div>
-                <a href="https://youtube.com/playlist?list=PL36EC6A6180271B0F&si=GPv7fLWSvTTkngqA" target="_blank" class="text-accent font-semibold hover:underline flex items-center">
-                    View Full Playlist <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                <a href="https://youtube.com/playlist?list=PL36EC6A6180271B0F&si=GPv7fLWSvTTkngqA" target="_blank" class="text-accent font-semibold hover:underline flex items-center text-sm">
+                    View Full Playlist on YouTube <i class="fas fa-arrow-right ml-2 text-xs"></i>
                 </a>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Video 1 -->
-                <div class="clean-card rounded-lg overflow-hidden p-2">
-                    <div class="aspect-video relative rounded bg-slate-200">
-                        <iframe class="absolute top-0 left-0 w-full h-full rounded" src="https://www.youtube.com/embed/ZK3O402wf1c?rel=0" title="The Geometry of Linear Equations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="clean-card rounded-xl overflow-hidden p-3 bg-white">
+                    <div class="aspect-video relative rounded-lg bg-slate-200 overflow-hidden mb-3">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/ZK3O402wf1c?rel=0" title="The Geometry of Linear Equations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <div class="p-3 text-sm font-semibold text-slate-800">Lec 1: Geometry of Linear Equations</div>
+                    <h4 class="text-sm font-bold text-slate-800 px-1">Lec 1: The Geometry of Linear Equations</h4>
                 </div>
                 <!-- Video 2 -->
-                <div class="clean-card rounded-lg overflow-hidden p-2">
-                    <div class="aspect-video relative rounded bg-slate-200">
-                        <iframe class="absolute top-0 left-0 w-full h-full rounded" src="https://www.youtube.com/embed/QVKj3LDF9H4?rel=0" title="Elimination with Matrices" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="clean-card rounded-xl overflow-hidden p-3 bg-white">
+                    <div class="aspect-video relative rounded-lg bg-slate-200 overflow-hidden mb-3">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/QVKj3LDF9H4?rel=0" title="Elimination with Matrices" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <div class="p-3 text-sm font-semibold text-slate-800">Lec 2: Elimination with Matrices</div>
+                    <h4 class="text-sm font-bold text-slate-800 px-1">Lec 2: Elimination with Matrices</h4>
                 </div>
                 <!-- Video 3 -->
-                <div class="clean-card rounded-lg overflow-hidden p-2">
-                    <div class="aspect-video relative rounded bg-slate-200">
-                        <iframe class="absolute top-0 left-0 w-full h-full rounded" src="https://www.youtube.com/embed/FX4C-JpTFgY?rel=0" title="Multiplication and Inverse Matrices" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="clean-card rounded-xl overflow-hidden p-3 bg-white">
+                    <div class="aspect-video relative rounded-lg bg-slate-200 overflow-hidden mb-3">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/FX4C-JpTFgY?rel=0" title="Multiplication and Inverse Matrices" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <div class="p-3 text-sm font-semibold text-slate-800">Lec 3: Multiplication and Inverse</div>
+                    <h4 class="text-sm font-bold text-slate-800 px-1">Lec 3: Multiplication and Inverse Matrices</h4>
                 </div>
                 <!-- Video 4 -->
-                <div class="clean-card rounded-lg overflow-hidden p-2">
-                    <div class="aspect-video relative rounded bg-slate-200">
-                        <iframe class="absolute top-0 left-0 w-full h-full rounded" src="https://www.youtube.com/embed/kYB8IZa5AuE?rel=0" title="Factorization into A = LU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="clean-card rounded-xl overflow-hidden p-3 bg-white">
+                    <div class="aspect-video relative rounded-lg bg-slate-200 overflow-hidden mb-3">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/kYB8IZa5AuE?rel=0" title="Factorization into A = LU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <div class="p-3 text-sm font-semibold text-slate-800">Lec 4: Factorization into A = LU</div>
+                    <h4 class="text-sm font-bold text-slate-800 px-1">Lec 4: Factorization into A = LU</h4>
                 </div>
                 <!-- Video 5 -->
-                <div class="clean-card rounded-lg overflow-hidden p-2">
-                    <div class="aspect-video relative rounded bg-slate-200">
-                        <iframe class="absolute top-0 left-0 w-full h-full rounded" src="https://www.youtube.com/embed/8o5Cmfpeo6g?rel=0" title="Transposes, Permutations, Spaces R^n" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="clean-card rounded-xl overflow-hidden p-3 bg-white">
+                    <div class="aspect-video relative rounded-lg bg-slate-200 overflow-hidden mb-3">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/8o5Cmfpeo6g?rel=0" title="Transposes, Permutations, Spaces R^n" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <div class="p-3 text-sm font-semibold text-slate-800">Lec 5: Transposes & Permutations</div>
+                    <h4 class="text-sm font-bold text-slate-800 px-1">Lec 5: Transposes, Permutations, Spaces R^n</h4>
                 </div>
                 <!-- Video 6 -->
-                <div class="clean-card rounded-lg overflow-hidden p-2">
-                    <div class="aspect-video relative rounded bg-slate-200">
-                        <iframe class="absolute top-0 left-0 w-full h-full rounded" src="https://www.youtube.com/embed/J66x2k-AHAQ?rel=0" title="Column Space and Nullspace" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="clean-card rounded-xl overflow-hidden p-3 bg-white">
+                    <div class="aspect-video relative rounded-lg bg-slate-200 overflow-hidden mb-3">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/J66x2k-AHAQ?rel=0" title="Column Space and Nullspace" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <div class="p-3 text-sm font-semibold text-slate-800">Lec 6: Column Space and Nullspace</div>
+                    <h4 class="text-sm font-bold text-slate-800 px-1">Lec 6: Column Space and Nullspace</h4>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Batches Section (Minimalist Enrollment) -->
-    <section id="batches" class="py-20 px-6 lg:px-20 bg-white">
-        <div class="max-w-7xl mx-auto text-center mb-12">
-            <h2 class="text-3xl font-bold font-serif text-slate-900 mb-4">Upcoming Batches</h2>
-            <p class="text-slate-500">Clean structures, transparent pricing, uncompromised quality.</p>
+    <section id="batches" class="py-24 px-6 lg:px-20 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <span class="text-xs font-bold text-accent uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">Admissions Open</span>
+            <h2 class="text-3xl md:text-4xl font-bold font-serif text-slate-900 mt-4 mb-4">Flagship Coaching Batches</h2>
+            <p class="text-slate-500 max-w-xl mx-auto">Clean structures, transparent pricing, uncompromised quality designed for peak performance.</p>
         </div>
         
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- JEE Batch -->
-            <div class="clean-card rounded-xl p-8 flex flex-col relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-full h-1 bg-slate-800"></div>
+            <div class="clean-card rounded-2xl p-8 flex flex-col relative overflow-hidden bg-white shadow-xs">
+                <div class="absolute top-0 left-0 w-full h-1 bg-slate-900"></div>
                 <h3 class="text-2xl font-bold text-slate-900 mb-1">Target JEE 2025</h3>
                 <p class="text-sm font-semibold text-accent mb-6">Class 12 & Droppers</p>
                 <ul class="text-sm text-slate-600 space-y-3 mb-8 flex-1">
                     <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Math & Physics Modules</li>
                     <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Advanced Level DPPs</li>
-                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Weekly AITS</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Weekly All India Test Series</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 24/7 Doubt Engine Access</li>
                 </ul>
-                <div class="text-2xl font-bold text-slate-900 mb-4">₹4,500 <span class="text-sm text-slate-400 line-through font-normal">₹9,000</span></div>
-                <!-- WhatsApp Enrollment Forwarding -->
-                <a href="https://wa.me/917033131480?text=Hello,%20I%20would%20like%20to%20enroll%20in%20the%20Target%20JEE%202025%20Batch." target="_blank" class="w-full bg-slate-900 text-white font-bold py-3 rounded text-sm text-center hover:bg-slate-800 transition flex items-center justify-center gap-2">
+                <div class="text-3xl font-bold text-slate-900 mb-6">₹4,500 <span class="text-sm text-slate-400 line-through font-normal">₹9,000</span></div>
+                <a href="https://wa.me/917033131480?text=Hello,%20I%20would%20like%20to%20enroll%20in%20the%20Target%20JEE%202025%20Batch." target="_blank" class="w-full bg-slate-900 text-white font-bold py-3.5 rounded-xl text-sm text-center hover:bg-slate-800 transition flex items-center justify-center gap-2">
                     <i class="fab fa-whatsapp text-green-400 text-lg"></i> Enroll via WhatsApp
                 </a>
             </div>
 
             <!-- NEET Batch -->
-            <div class="clean-card rounded-xl p-8 flex flex-col relative overflow-hidden transform md:-translate-y-4 border-accent shadow-lg">
+            <div class="clean-card rounded-2xl p-8 flex flex-col relative overflow-hidden transform md:-translate-y-3 border-accent shadow-xl bg-white">
                 <div class="absolute top-0 left-0 w-full h-1 bg-accent"></div>
-                <div class="absolute top-4 right-4 bg-accent/10 text-accent text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Popular</div>
+                <div class="absolute top-4 right-4 bg-accent/10 text-accent text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Most Popular</div>
                 <h3 class="text-2xl font-bold text-slate-900 mb-1">Target NEET 2025</h3>
                 <p class="text-sm font-semibold text-accent mb-6">Class 11 & 12</p>
                 <ul class="text-sm text-slate-600 space-y-3 mb-8 flex-1">
-                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Physics Foundation</li>
-                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> NCERT Line-by-Line</li>
-                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Offline OMR Practice</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Physics Foundation & Mechanics</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> NCERT Line-by-Line Mastery</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Offline OMR Practice Sheets</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Personal Mentorship by Toppers</li>
                 </ul>
-                <div class="text-2xl font-bold text-slate-900 mb-4">₹3,999 <span class="text-sm text-slate-400 line-through font-normal">₹8,000</span></div>
-                <!-- WhatsApp Enrollment Forwarding -->
-                <a href="https://wa.me/917033131480?text=Hello,%20I%20would%20like%20to%20enroll%20in%20the%20Target%20NEET%202025%20Batch." target="_blank" class="w-full bg-accent text-white font-bold py-3 rounded text-sm text-center hover:bg-blue-700 transition flex items-center justify-center gap-2">
+                <div class="text-3xl font-bold text-slate-900 mb-6">₹3,999 <span class="text-sm text-slate-400 line-through font-normal">₹8,000</span></div>
+                <a href="https://wa.me/917033131480?text=Hello,%20I%20would%20like%20to%20enroll%20in%20the%20Target%20NEET%202025%20Batch." target="_blank" class="w-full bg-accent text-white font-bold py-3.5 rounded-xl text-sm text-center hover:bg-blue-700 transition flex items-center justify-center gap-2">
                     <i class="fab fa-whatsapp text-white text-lg"></i> Enroll via WhatsApp
                 </a>
             </div>
 
             <!-- CBSE Batch -->
-            <div class="clean-card rounded-xl p-8 flex flex-col relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-full h-1 bg-slate-800"></div>
+            <div class="clean-card rounded-2xl p-8 flex flex-col relative overflow-hidden bg-white shadow-xs">
+                <div class="absolute top-0 left-0 w-full h-1 bg-slate-900"></div>
                 <h3 class="text-2xl font-bold text-slate-900 mb-1">CBSE Boards</h3>
                 <p class="text-sm font-semibold text-accent mb-6">Class 12</p>
                 <ul class="text-sm text-slate-600 space-y-3 mb-8 flex-1">
-                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Strict CBSE Pattern</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Strict CBSE Pattern Syllabus</li>
                     <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Subjective Writing Prep</li>
-                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 10 Years PYQs</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 10 Years PYQs Solved</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Practical Exam Guidance</li>
                 </ul>
-                <div class="text-2xl font-bold text-slate-900 mb-4">₹2,500 <span class="text-sm text-slate-400 line-through font-normal">₹5,000</span></div>
-                <!-- WhatsApp Enrollment Forwarding -->
-                <a href="https://wa.me/917033131480?text=Hello,%20I%20would%20like%20to%20enroll%20in%20the%20CBSE%20Boards%20Batch." target="_blank" class="w-full bg-slate-900 text-white font-bold py-3 rounded text-sm text-center hover:bg-slate-800 transition flex items-center justify-center gap-2">
+                <div class="text-3xl font-bold text-slate-900 mb-6">₹2,500 <span class="text-sm text-slate-400 line-through font-normal">₹5,000</span></div>
+                <a href="https://wa.me/917033131480?text=Hello,%20I%20would%20like%20to%20enroll%20in%20the%20CBSE%20Boards%20Batch." target="_blank" class="w-full bg-slate-900 text-white font-bold py-3.5 rounded-xl text-sm text-center hover:bg-slate-800 transition flex items-center justify-center gap-2">
                     <i class="fab fa-whatsapp text-green-400 text-lg"></i> Enroll via WhatsApp
                 </a>
             </div>
         </div>
     </section>
 
+    <!-- Study Material Download Section (PW/Allen Vibe) -->
+    <section id="study-material" class="py-24 px-6 lg:px-20 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <span class="text-xs font-bold text-accent uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">Free Resources</span>
+            <h2 class="text-3xl md:text-4xl font-bold font-serif text-slate-900 mt-4 mb-3">Download Sample Study Material</h2>
+            <p class="text-slate-500">Access high-yield formula sheets and practice booklets instantly.</p>
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="clean-card p-8 rounded-2xl bg-white text-left">
+                <div class="text-accent text-2xl mb-4"><i class="fas fa-file-pdf"></i></div>
+                <h3 class="font-bold text-lg text-slate-900 mb-2">Calculus Formula Handbook</h3>
+                <p class="text-sm text-slate-500 mb-6">Complete cheat sheet covering limits, derivatives, integrals, and vector calculus.</p>
+                <a href="#enquiry" class="text-accent text-sm font-bold flex items-center hover:underline">Download PDF (Free) <i class="fas fa-download ml-2 text-xs"></i></a>
+            </div>
+            <div class="clean-card p-8 rounded-2xl bg-white text-left">
+                <div class="text-accent text-2xl mb-4"><i class="fas fa-file-pdf"></i></div>
+                <h3 class="font-bold text-lg text-slate-900 mb-2">NEET Physics Short Notes</h3>
+                <p class="text-sm text-slate-500 mb-6">High-weightage formula summaries for quick revision right before exam day.</p>
+                <a href="#enquiry" class="text-accent text-sm font-bold flex items-center hover:underline">Download PDF (Free) <i class="fas fa-download ml-2 text-xs"></i></a>
+            </div>
+            <div class="clean-card p-8 rounded-2xl bg-white text-left">
+                <div class="text-accent text-2xl mb-4"><i class="fas fa-file-pdf"></i></div>
+                <h3 class="font-bold text-lg text-slate-900 mb-2">JEE Advanced DPP Bank</h3>
+                <p class="text-sm text-slate-500 mb-6">50 multi-correct challenging problems handpicked for top aspirants.</p>
+                <a href="#enquiry" class="text-accent text-sm font-bold flex items-center hover:underline">Download PDF (Free) <i class="fas fa-download ml-2 text-xs"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 px-6 lg:px-20 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <span class="text-xs font-bold text-accent uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">Proven Results</span>
+            <h2 class="text-3xl md:text-4xl font-bold font-serif text-slate-900 mt-4 mb-3">Our Hall of Fame</h2>
+            <p class="text-slate-500">Consistent top ranks across India's toughest competitive examinations.</p>
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="clean-card p-8 rounded-2xl text-center bg-white shadow-xs">
+                <div class="text-accent text-3xl mb-4 font-bold font-serif">AIR 12</div>
+                <h3 class="text-xl font-bold text-slate-800">Aarav Sharma</h3>
+                <p class="text-sm font-semibold text-slate-400 mb-4">JEE Advanced 2024</p>
+                <p class="text-slate-600 italic text-sm leading-relaxed">"The visual approach to matrices and calculus fundamentally changed how I approached physics mechanics problems in the exam."</p>
+            </div>
+            <div class="clean-card p-8 rounded-2xl text-center bg-white shadow-xs">
+                <div class="text-accent text-3xl mb-4 font-bold font-serif">695 / 720</div>
+                <h3 class="text-xl font-bold text-slate-800">Neha Gupta</h3>
+                <p class="text-sm font-semibold text-slate-400 mb-4">NEET UG 2024</p>
+                <p class="text-slate-600 italic text-sm leading-relaxed">"Clear, noise-free lectures focused entirely on core physics concepts. The single best decision I made for my preparation."</p>
+            </div>
+            <div class="clean-card p-8 rounded-2xl text-center bg-white shadow-xs">
+                <div class="text-accent text-3xl mb-4 font-bold font-serif">99.6%</div>
+                <h3 class="text-xl font-bold text-slate-800">Rohan Verma</h3>
+                <p class="text-sm font-semibold text-slate-400 mb-4">CBSE Class 12 Boards</p>
+                <p class="text-slate-600 italic text-sm leading-relaxed">"Perfect alignment with NCERT, yet teaches you the 'why' behind every mathematical formula. Scored 100 in Mathematics."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 px-6 lg:px-20 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+            <span class="text-xs font-bold text-accent uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">Got Questions?</span>
+            <h2 class="text-3xl md:text-4xl font-bold font-serif text-slate-900 mt-4 mb-3">Frequently Asked Questions</h2>
+            <p class="text-slate-500">Everything you need to know about our classes and curriculum.</p>
+        </div>
+        <div class="max-w-3xl mx-auto space-y-4">
+            <div class="clean-card rounded-xl p-6 bg-white">
+                <h3 class="font-bold text-slate-900 text-base">Are these courses suitable for absolute beginners?</h3>
+                <p class="text-slate-600 text-sm mt-2">Yes. We start from basic conceptual principles and build up smoothly to advanced IIT-JEE and NEET levels.</p>
+            </div>
+            <div class="clean-card rounded-xl p-6 bg-white">
+                <h3 class="font-bold text-slate-900 text-base">How are doubts resolved after lectures?</h3>
+                <p class="text-slate-600 text-sm mt-2">Students have 24/7 access to our specialized doubt engine via WhatsApp and our dedicated faculty support portal.</p>
+            </div>
+            <div class="clean-card rounded-xl p-6 bg-white">
+                <h3 class="font-bold text-slate-900 text-base">Will I get recorded backups if I miss a live session?</h3>
+                <p class="text-slate-600 text-sm mt-2">Yes, all live sessions are recorded in high definition and instantly available in your student dashboard for lifetime review.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Enquiry Form & Map Section -->
-    <section id="enquiry" class="py-20 px-6 lg:px-20 bg-slate-50 border-t border-slate-200">
+    <section id="enquiry" class="py-24 px-6 lg:px-20 bg-white border-b border-slate-200">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
-            <!-- Clean Enquiry Form (Web3Forms) -->
-            <div class="clean-card p-8 md:p-10 rounded-2xl w-full">
-                <h3 class="text-2xl font-bold font-serif mb-2">Have Questions?</h3>
-                <p class="text-slate-500 text-sm mb-6">Leave your details below and our counseling team will get back to you shortly.</p>
+            <!-- Web3Forms Clean Enquiry Form -->
+            <div class="clean-card p-8 md:p-10 rounded-2xl w-full bg-white shadow-sm">
+                <span class="text-xs font-bold text-accent uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">Get in Touch</span>
+                <h3 class="text-2xl font-bold font-serif text-slate-900 mt-4 mb-2">Have Questions? Talk to Our Mentors</h3>
+                <p class="text-slate-500 text-sm mb-8">Leave your details below and our counseling team will get back to you shortly.</p>
                 
                 <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
-                    <!-- Web3Forms Access Key -->
                     <input type="hidden" name="access_key" value="b2b598ce-2ae0-4a70-8430-c5e51d5fc641">
                     
                     <div>
                         <label class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-2">Student Name</label>
-                        <input type="text" name="name" required placeholder="John Doe" class="w-full bg-white border border-slate-300 text-slate-900 rounded px-4 py-2.5 text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition">
+                        <input type="text" name="name" required placeholder="John Doe" class="w-full bg-slate-50 border border-slate-300 text-slate-900 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition">
                     </div>
                     
                     <div>
                         <label class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-2">Mobile Number</label>
-                        <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX" class="w-full bg-white border border-slate-300 text-slate-900 rounded px-4 py-2.5 text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition">
+                        <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX" class="w-full bg-slate-50 border border-slate-300 text-slate-900 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition">
                     </div>
                     
                     <div>
                         <label class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-2">Select Course</label>
-                        <select name="course" required class="w-full bg-white border border-slate-300 text-slate-900 rounded px-4 py-2.5 text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition appearance-none">
+                        <select name="course" required class="w-full bg-slate-50 border border-slate-300 text-slate-900 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition">
                             <option value="" disabled selected>Choose a course...</option>
                             <option value="JEE">JEE (Mains + Advanced)</option>
                             <option value="NEET">NEET (UG)</option>
@@ -297,83 +487,84 @@
                         </select>
                     </div>
                     
-                    <!-- Bot Honeypot for spam prevention -->
                     <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                     
-                    <button type="submit" class="w-full bg-slate-900 text-white font-bold py-3 rounded text-sm hover:bg-slate-800 transition mt-2">
+                    <button type="submit" class="w-full bg-slate-900 text-white font-bold py-3.5 rounded-xl text-sm hover:bg-slate-800 transition mt-2 shadow-sm">
                         Submit Enquiry
                     </button>
                 </form>
             </div>
 
             <!-- Google Map -->
-            <div class="h-full w-full min-h-[350px] bg-white rounded-2xl overflow-hidden border border-slate-200 p-2">
-                <!-- Pointing to Vigyan Nagar, Kota, Rajasthan -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14238.163351980316!2d75.84587396030999!3d25.1325997672322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396f849646c05bd9%3A0xdaebcc1ecbf0766c!2sVigyan%20Nagar%2C%20Kota%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" class="w-full h-full rounded" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="h-full w-full min-h-[420px] bg-white rounded-2xl overflow-hidden border border-slate-200 p-2 shadow-sm">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14238.163351980316!2d75.84587396030999!3d25.1325997672322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396f849646c05bd9%3A0xdaebcc1ecbf0766c!2sVigyan%20Nagar%2C%20Kota%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" class="w-full h-full rounded-xl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
         </div>
     </section>
 
     <!-- Modern Footer -->
-    <footer class="bg-white py-12 border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 lg:px-20 flex flex-col md:flex-row justify-between items-start gap-8">
+    <footer class="bg-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-20 grid grid-cols-1 md:grid-cols-4 gap-10">
             
-            <!-- Brand & Info -->
-            <div class="max-w-xs">
-                <a href="#" class="text-xl font-bold font-serif flex items-center gap-2 text-slate-900 mb-4">
-                    <div class="w-8 h-8 bg-slate-900 text-white rounded flex items-center justify-center font-sans text-sm font-bold">SP</div>
+            <div class="md:col-span-1">
+                <a href="#" class="text-xl font-bold font-serif flex items-center gap-2 text-white mb-4">
+                    <div class="w-8 h-8 bg-accent text-white rounded-lg flex items-center justify-center font-sans text-sm font-bold">SP</div>
                     Saem Physics
                 </a>
-                <p class="text-slate-500 text-sm mb-4">NEET | JEE | MIT Level Physics & Math.<br>Simplifying the universe, one equation at a time.</p>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">NEET | JEE | MIT Level Physics & Math. Simplifying the universe, one equation at a time.</p>
+                <div class="flex gap-3">
+                    <a href="https://youtube.com" target="_blank" class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-accent hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-accent hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-accent hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://telegram.org" target="_blank" class="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-accent hover:text-white transition"><i class="fab fa-telegram-plane"></i></a>
+                </div>
             </div>
             
-            <!-- Contact Address -->
             <div>
-                <h4 class="font-bold text-slate-900 mb-4 font-serif">Reach Us</h4>
-                <ul class="space-y-3 text-sm text-slate-600">
-                    <li class="flex items-start">
-                        <i class="fas fa-map-marker-alt mt-1 mr-3 text-slate-400"></i>
-                        <span>Vigyan Nagar, Kota,<br>Rajasthan, India</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-phone mr-3 text-slate-400"></i>
-                        <a href="tel:+917033131480" class="hover:text-accent font-semibold transition">+91 7033131480</a>
-                    </li>
+                <h4 class="font-bold text-white mb-4 font-serif text-base">Quick Links</h4>
+                <ul class="space-y-2.5 text-sm text-slate-400">
+                    <li><a href="#about" class="hover:text-white transition">About Institute</a></li>
+                    <li><a href="#syllabus" class="hover:text-white transition">Syllabus Overview</a></li>
+                    <li><a href="#batches" class="hover:text-white transition">Flagship Batches</a></li>
+                    <li><a href="#testimonials" class="hover:text-white transition">Toppers Hall of Fame</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-white mb-4 font-serif text-base">Courses</h4>
+                <ul class="space-y-2.5 text-sm text-slate-400">
+                    <li><a href="#batches" class="hover:text-white transition">Target JEE Advanced</a></li>
+                    <li><a href="#batches" class="hover:text-white transition">Target NEET UG Physics</a></li>
+                    <li><a href="#batches" class="hover:text-white transition">CBSE Class 12 Boards</a></li>
+                    <li><a href="#study-material" class="hover:text-white transition">Free Study Material</a></li>
                 </ul>
             </div>
             
-            <!-- Clean Social Icons -->
             <div>
-                <h4 class="font-bold text-slate-900 mb-4 font-serif">Connect</h4>
-                <div class="flex gap-4">
-                    <a href="#" target="_blank" class="w-10 h-10 rounded bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-slate-900 hover:text-white transition">
-                        <i class="fab fa-youtube text-lg"></i>
-                    </a>
-                    <a href="#" target="_blank" class="w-10 h-10 rounded bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-slate-900 hover:text-white transition">
-                        <i class="fab fa-instagram text-lg"></i>
-                    </a>
-                    <a href="#" target="_blank" class="w-10 h-10 rounded bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-slate-900 hover:text-white transition">
-                        <i class="fab fa-facebook-f text-lg"></i>
-                    </a>
-                    <a href="#" target="_blank" class="w-10 h-10 rounded bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-slate-900 hover:text-white transition">
-                        <i class="fab fa-telegram-plane text-lg"></i>
-                    </a>
-                </div>
+                <h4 class="font-bold text-white mb-4 font-serif text-base">Reach Us</h4>
+                <ul class="space-y-3 text-sm text-slate-400">
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt mt-1 mr-3 text-accent"></i>
+                        <span>Vigyan Nagar, Kota,<br>Rajasthan, India</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-phone mr-3 text-accent"></i>
+                        <a href="tel:+917033131480" class="hover:text-white font-semibold transition">+91 7033131480</a>
+                    </li>
+                </ul>
             </div>
         </div>
         
-        <div class="max-w-7xl mx-auto px-6 lg:px-20 mt-12 pt-6 border-t border-slate-100 text-center text-xs text-slate-400 font-semibold">
-            &copy; 2026 Saem Physics Institute. All rights reserved.
+        <div class="max-w-7xl mx-auto px-6 lg:px-20 mt-12 pt-6 border-t border-slate-800 text-center text-xs text-slate-500 font-medium">
+            &copy; 2026 Saem Physics Institute, Vigyan Nagar, Kota. All rights reserved.
         </div>
     </footer>
 
     <!-- Floating WhatsApp Button with Pulse Effect -->
     <div class="fixed bottom-6 right-6 z-50 flex items-center justify-center group">
-        <!-- Ping Animation Ring -->
         <span class="absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-60 animate-ping group-hover:opacity-0 transition-opacity"></span>
-        <!-- Actual Button -->
-        <a href="https://wa.me/917033131480" target="_blank" rel="noopener noreferrer" class="relative inline-flex items-center justify-center h-14 w-14 rounded-full bg-[#25D366] text-white shadow-lg shadow-green-500/30 hover:bg-green-600 transition-all hover:scale-105">
+        <a href="https://wa.me/917033131480" target="_blank" rel="noopener noreferrer" class="relative inline-flex items-center justify-center h-14 w-14 rounded-full bg-[#25D366] text-white shadow-xl shadow-green-500/30 hover:bg-green-600 transition-all hover:scale-105">
             <i class="fab fa-whatsapp text-3xl"></i>
         </a>
     </div>
